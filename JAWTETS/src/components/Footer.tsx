@@ -37,6 +37,7 @@ export default function Footer() {
           <h4>Contact</h4>
           <p>Website: www.jawtets.com</p>
           <p>Email: jawtets@gmail.com</p>
+          <p>Email: info@jawtets.com</p>
           <p>Phone: +255 656 639 615</p>
         </div>
 
