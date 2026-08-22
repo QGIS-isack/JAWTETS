@@ -1,0 +1,234 @@
+/* Chemicals Supply Page */
+.chemicals-supply-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.chemicals-intro {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+.chemicals-intro p {
+  font-size: 1.8rem;
+}
+/* Chemical Categories */
+.chemicals-categories h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.category-card {
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.category-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(30, 91, 168, 0.15);
+  transform: translateY(-5px);
+}
+
+.category-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.category-card h3 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-card p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Benefits */
+.chemicals-benefits h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.chemicals-benefits .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.chemicals-benefits .benefit-item {
+  background: linear-gradient(135deg, rgba(30, 91, 168, 0.05) 0%, rgba(46, 204, 113, 0.05) 100%);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.chemicals-benefits .benefit-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(30, 91, 168, 0.1);
+}
+
+.chemicals-benefits .benefit-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.chemicals-benefits .benefit-item h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.chemicals-benefits .benefit-item p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Quality Assurance */
+.chemicals-quality {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.chemicals-quality h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.quality-content p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.quality-list {
+  list-style: none;
+  padding: 0;
+}
+
+.quality-list li {
+  padding: 0.8rem 0;
+  color: #666;
+  border-bottom: 1px solid var(--border-color);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.quality-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.quality-list li:last-child {
+  border-bottom: none;
+}
+
+/* Why Choose */
+.chemicals-why {
+  margin-bottom: 3rem;
+}
+
+.chemicals-why h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-box {
+  background: white;
+  border: 2px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.why-box:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(30, 91, 168, 0.1);
+}
+
+.why-box h4 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.why-box p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Mission */
+.chemicals-mission {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.chemicals-mission .mission-box {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.chemicals-mission .mission-box strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .categories-grid,
+  .chemicals-benefits .benefits-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,189 @@
+/* Solar Energy Page */
+.solar-energy-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.solar-intro {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+.solar-intro p {
+  font-size: 1.8rem;
+}
+/* Solar Services */
+.solar-services {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+}
+
+.solar-services h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.service-item {
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.service-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(30, 91, 168, 0.15);
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.service-item h3 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-item p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Solar Benefits */
+.solar-benefits h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.benefit-item {
+  background: linear-gradient(135deg, rgba(30, 91, 168, 0.05) 0%, rgba(46, 204, 113, 0.05) 100%);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.benefit-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(30, 91, 168, 0.1);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.benefit-item h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.benefit-item p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Solar Technology */
+.solar-technology {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.solar-technology h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.tech-content p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.tech-list li {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+  color: #666;
+}
+
+/* Solar Mission */
+.solar-mission {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.solar-mission .mission-box {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.solar-mission .mission-box strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .services-grid,
+  .benefits-grid,
+  .tech-list {
+    grid-template-columns: 1fr;
+  }
+}

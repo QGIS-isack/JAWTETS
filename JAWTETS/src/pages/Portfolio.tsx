@@ -1,0 +1,99 @@
+import PortfolioItem from '../components/PortfolioItem'
+import './Portfolio.css'
+
+export default function Portfolio() {
+  const projects = [
+    {
+      id: 1,
+      title: 'Industrial Water Treatment Plant',
+      category: 'Water Treatment',
+      description: 'Complete water treatment system installation for a major industrial facility, including filtration, purification, and monitoring systems.'
+    },
+    {
+      id: 2,
+      title: 'Commercial Solar Array',
+      category: 'Solar Solutions',
+      description: 'Large-scale solar panel installation for a commercial complex, providing 40% of annual energy requirements.'
+    },
+    {
+      id: 3,
+      title: 'Deep Borehole Project',
+      category: 'Borehole Drilling',
+      description: 'Successful drilling and development of a deep water well serving a community of 5000+ residents.'
+    },
+    {
+      id: 4,
+      title: 'Water Purification System',
+      category: 'Water Treatment',
+      description: 'Advanced purification system for a hospital facility, meeting strict medical water quality standards.'
+    },
+    {
+      id: 5,
+      title: 'Residential Solar Installation',
+      category: 'Solar Solutions',
+      description: 'Off-grid solar system installation for residential property with battery storage solutions.'
+    },
+    {
+      id: 6,
+      title: 'Chemical Supply Distribution',
+      category: 'Chemical Supply',
+      description: 'Ongoing supply of water treatment chemicals to multiple municipalities and industrial clients.'
+    },
+    {
+      id: 7,
+      title: 'Agricultural Borehole System',
+      category: 'Borehole Drilling',
+      description: 'Multiple borehole drilling and pump installation for agricultural irrigation projects.'
+    },
+    {
+      id: 8,
+      title: 'Eco-Friendly Treatment Solution',
+      category: 'Water Treatment',
+      description: 'Environmentally sustainable water treatment system using advanced filtration technology.'
+    }
+  ]
+
+  return (
+    <div className="portfolio-page">
+      <section className="page-header">
+        <h1>Our Portfolio</h1>
+        <p>Showcase of our successful projects and client solutions</p>
+      </section>
+
+      <div className="container">
+        <div className="portfolio-grid">
+          {projects.map(project => (
+            <PortfolioItem
+              key={project.id}
+              title={project.title}
+              category={project.category}
+              description={project.description}
+            />
+          ))}
+        </div>
+
+        <section className="portfolio-stats">
+          <h2>Our Impact</h2>
+          <div className="stats-grid">
+            <div className="stat">
+              <h3>500+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div className="stat">
+              <h3>1000+</h3>
+              <p>Satisfied Clients</p>
+            </div>
+            <div className="stat">
+              <h3>50+</h3>
+              <p>Cities Served</p>
+            </div>
+            <div className="stat">
+              <h3>20+</h3>
+              <p>Years Experience</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  )
+}

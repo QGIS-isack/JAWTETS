@@ -1,0 +1,118 @@
+.solution-carousel {
+  width: 100%;
+  padding: 1rem 0 2rem;
+}
+
+.carousel-container {
+  display: grid;
+  gap: 0;
+}
+
+.carousel-item {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr) 290px;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 150px;
+  border-bottom: 1px solid rgba(16, 47, 77, 0.12);
+  padding: 0.85rem 0;
+  transition: var(--transition);
+}
+
+.carousel-item:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.carousel-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 112px;
+  border-radius: 4px;
+  background: #4f4c58;
+  color: white;
+  font-size: 2.8rem;
+}
+
+.carousel-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.carousel-item:nth-child(2) .carousel-icon {
+  background: #77736d;
+}
+
+.carousel-item:nth-child(3) .carousel-icon {
+  background: #d99024;
+}
+
+.carousel-item:nth-child(4) .carousel-icon {
+  background: #5f5b67;
+}
+
+.carousel-item:nth-child(5) .carousel-icon {
+  background: #66636c;
+}
+
+.solution-details {
+  display: contents;
+}
+
+.solution-details .carousel-icon {
+  grid-column: 1;
+}
+
+.solution-details > div:last-child {
+  grid-column: 2;
+  padding: 0.5rem 0;
+}
+
+.solution-item-image {
+  grid-column: 3;
+  width: 100%;
+  height: 126px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.carousel-item h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.carousel-item p {
+  margin: 0;
+  color: #667085;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .carousel-icon {
+    width: 72px;
+    height: 96px;
+    font-size: 2.2rem;
+  }
+
+  .solution-details .carousel-icon,
+  .solution-details > div:last-child {
+    grid-column: auto;
+  }
+
+  .solution-item-image {
+    grid-column: 2;
+    height: 180px;
+  }
+}

@@ -1,0 +1,255 @@
+/* Why Choose Us Page */
+.why-choose-us-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.why-intro {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+.why-intro p {
+  font-size: 1.8rem;
+}
+/* Reasons Section */
+.reasons-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.reason-card {
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.reason-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(30, 91, 168, 0.15);
+  transform: translateY(-5px);
+}
+
+.reason-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.reason-card h3 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.reason-card p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Comparison Section */
+.comparison-section {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.comparison-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.comparison-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+  color: white;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+th.highlight {
+  background-color: var(--accent-color);
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+td.highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Testimonials Summary */
+.testimonials-summary {
+  margin-bottom: 3rem;
+}
+
+.testimonials-summary h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.quote-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.quote-card {
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: var(--transition);
+  border-left: 4px solid var(--primary-color);
+}
+
+.quote-card:hover {
+  box-shadow: 0 10px 30px rgba(30, 91, 168, 0.15);
+  transform: translateY(-5px);
+}
+
+.quote-text {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.quote-author {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Why CTA */
+.why-cta {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.why-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.why-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.why-cta .cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: white;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.why-cta .cta-button:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Final Statement */
+.final-statement {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.statement-box {
+  text-align: center;
+}
+
+.statement-box h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.statement-box p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .reasons-grid,
+  .quote-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-table {
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 0.75rem;
+  }
+
+  .why-cta h2 {
+    font-size: 1.5rem;
+  }
+}
