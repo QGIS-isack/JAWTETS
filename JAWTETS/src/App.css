@@ -15,6 +15,29 @@
   box-sizing: border-box;
 }
 
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  overflow-wrap: anywhere;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -40,6 +63,8 @@ html, body, #root {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
+  min-width: 0;
 }
 
 /* Common Utilities */
@@ -92,5 +117,43 @@ html, body, #root {
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
+  }
+
+  .page-header {
+    padding: 2.5rem 1rem;
+  }
+
+  .page-header h1 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .contact-content {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .services-list,
+  .reasons-grid,
+  .values-grid,
+  .team-highlights,
+  .portfolio-grid,
+  .stats-grid,
+  .reasons-grid,
+  .quote-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .why-intro p,
+  .certifications p {
+    font-size: 1.1rem;
   }
 }
