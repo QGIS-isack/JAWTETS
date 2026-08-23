@@ -53,6 +53,18 @@
   color: var(--accent-color);
 }
 
+.tagline-water {
+  color: #55b9f3;
+}
+
+.tagline-energy {
+  color: #f6c945;
+}
+
+.tagline-solution {
+  color: #74d69a;
+}
+
 .social-links {
   display: flex;
   gap: 0.75rem;

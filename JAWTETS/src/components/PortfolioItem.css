@@ -15,10 +15,117 @@
   transform: translateY(-5px);
 }
 
+.portfolio-item-clickable {
+  cursor: pointer;
+}
+
+.portfolio-gallery-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(8, 20, 32, 0.86);
+  cursor: default;
+}
+
+.portfolio-gallery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 1000px);
+  height: min(94vh, 820px);
+}
+
+.portfolio-gallery img {
+  max-width: 84%;
+  max-height: calc(100% - 8rem);
+  object-fit: contain;
+}
+
+.portfolio-gallery button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: white;
+  color: var(--dark-color);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.portfolio-gallery button:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+.portfolio-gallery-close {
+  top: 0;
+  right: 0;
+}
+
+.portfolio-gallery-previous {
+  left: 0;
+}
+
+.portfolio-gallery-next {
+  right: 0;
+}
+
+.portfolio-gallery p {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  color: white;
+}
+
+.portfolio-gallery-thumbnails {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  max-width: 90%;
+  overflow-x: auto;
+  padding: 0.35rem;
+}
+
+.portfolio-gallery-thumbnails button {
+  position: static;
+  flex: 0 0 4.5rem;
+  width: 4.5rem;
+  height: 3.25rem;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+}
+
+.portfolio-gallery-thumbnails button.is-active {
+  border-color: var(--accent-color);
+}
+
+.portfolio-gallery-thumbnails img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+}
+
 .portfolio-image {
   width: 100%;
   height: 200px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   background-color: #f0f0f0;
 }

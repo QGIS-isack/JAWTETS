@@ -1,16 +1,22 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
 import boreholeIcon from '../assets/borehole-icon.jpg'
-import StandardCard from '../components/StandardCard'
 import StatBox from '../components/StatBox'
 import SolutionCarousel from '../components/SolutionCarousel'
-import Testimonial from '../components/Testimonial'
 import chemicalsIcon from '../assets/chemicals-icon.avif'
-import expertImage from '../assets/expert.avif'
 import solarIcon from '../assets/solar-icon.jpg'
 import technicalIcon from '../assets/technical-icon.jpg'
 import waterIcon from '../assets/water-icon.jpg'
 import waterImage from '../assets/water.jpg'
+import jawtetsLogo from '../assets/Logo.png'
+import heroImageOne from '../assets/image/WhatsApp Image 2026-08-22 at 8.41.11 PM.jpeg'
+import heroImageTwo from '../assets/image/WhatsApp Image 2026-08-22 at 8.45.08 PM.jpeg'
+import heroImageThree from '../assets/image/WhatsApp Image 2026-08-22 at 8.45.09 PM.jpeg'
+import heroImageFour from '../assets/image/WhatsApp Image 2026-08-22 at 8.45.09 PM (1).jpeg'
+import heroImageFive from '../assets/image/WhatsApp Image 2026-08-22 at 8.45.10 PM.jpeg'
+
+const heroImages = [heroImageOne, heroImageTwo, heroImageThree, heroImageFour, heroImageFive]
 
 const solutions = [
   { id: 1, iconImage: waterIcon, title: 'Water Treatment Solutions', description: 'Advanced and customized water treatment systems for clean, safe, and sustainable water.' },
@@ -20,42 +26,70 @@ const solutions = [
   { id: 5, iconImage: technicalIcon, title: 'Technical & Engineering Services', description: 'Expert technical support, system design, installation, and maintenance for long-term operational efficiency.' },
 ]
 
-const standards = [
-  { icon: '✓', title: 'Quality', description: 'High standards in every solution we deliver.' },
-  { icon: '⚙️', title: 'Reliability', description: 'Systems designed for consistent performance.' },
-  { icon: '💡', title: 'Innovation', description: 'Practical technology for changing needs.' },
-  { icon: '♻️', title: 'Sustainability', description: 'Solutions that protect resources and reduce waste.' },
-  { icon: '🤝', title: 'Partnership', description: 'Long-term support for every client.' },
-  { icon: '🛠️', title: 'Expertise', description: 'Experienced technical service from start to finish.' },
-]
-
-const testimonials = [
-  { name: 'Operations Manager', position: 'Operations Manager', company: 'Industrial Client', quote: 'JAWTETS delivered a dependable solution and responsive support.', metric: '99.9% uptime', category: 'Water Treatment' },
-  { name: 'Facilities Lead', position: 'Facilities Lead', company: 'Commercial Client', quote: 'The team understood our requirements and completed the work professionally.', metric: 'Reliable service', category: 'Technical Services' },
-]
-
 export default function Home() {
+  const [heroImageIndex, setHeroImageIndex] = useState(0)
+
+  useEffect(() => {
+    const imageTimer = window.setInterval(() => {
+      setHeroImageIndex((currentIndex) => (currentIndex + 1) % heroImages.length)
+    }, 5000)
+
+    return () => window.clearInterval(imageTimer)
+  }, [])
+
   return (
     <div className="home">
       <section className="hero">
         <div className="hero-content">
-          <img className="hero-image" src={waterImage} alt="Clean water flowing through a treatment system" />
-          <h1>
-            <span className="hero-title-water">Pure Water</span>{' '}
-            <span className="hero-title-energy">Smart Energy</span>{' '}
-            <span className="hero-title-reliable">Reliable Solutions</span>
-          </h1>
-          <div className="hero-actions">
-            <Link to="/contact" className="cta-button">Get Assessment</Link>
-            <Link to="/about" className="cta-button-secondary">Learn More</Link>
+          <img
+            key={heroImageIndex}
+            className="hero-image"
+            src={heroImages[heroImageIndex]}
+            alt="JAWTETS water and energy service"
+          />
+          <div className="hero-overlay" />
+          <div className="hero-copy">
+            <h1>
+              Trusted Water Treatment, Energy &amp; Technical Services
+            </h1>
+            <p>Reliable solutions for businesses and communities</p>
+            <div className="hero-divider" aria-hidden="true">
+              <span />
+              <strong></strong>
+              <span />
+            </div>
           </div>
         </div>
       </section>
 
       <div
-        /*className="water-treatment-background"
-        style={{ backgroundImage: `url(${oneWaterImage})` }}*/
       >
+        <section
+          className="home-about-section"
+          style={{ backgroundImage: `url(${waterImage})` }}
+        >
+        <div className="container">
+          <div className="home-about-layout">
+            <div className="home-about-brand">
+              <img className="home-about-logo" src={jawtetsLogo} alt="JAWTETS logo" />
+              <h3>JAWTETS</h3>
+            </div>
+            <div className="home-about-copy">
+              <h2>About JAWTETS</h2>
+              <p>
+                JAWTETS provides reliable water treatment, renewable energy, and technical
+                services for businesses and communities. With over 20 years of experience,
+                we deliver practical, sustainable solutions tailored to every client&apos;s needs.
+              </p>
+              <p>
+                Our experienced team combines technical expertise with practical innovation
+                to deliver quality solutions that support long-term performance and growth.
+              </p>
+            </div>
+          </div>
+        </div>
+        </section>
+
         {/* Solution Showcase */}
         <section className="solution-section">
         <div className="container">
@@ -93,27 +127,6 @@ export default function Home() {
         </div>
         </section>
 
-        {/* Core Standards */}
-        <section
-          className="standards-section"
-          style={{ backgroundImage: `url(${expertImage})` }}
-        >
-        <div className="container">
-          <h2>Excellence in Every Solution</h2>
-          <p className="section-subtitle">Our six core standards guide everything we deliver</p>
-          <div className="standards-grid">
-            {standards.map((standard, idx) => (
-              <StandardCard
-                key={idx}
-                icon={standard.icon}
-                title={standard.title}
-                description={standard.description}
-              />
-            ))}
-          </div>
-        </div>
-        </section>
-
         {/* Impact Section */}
         <section className="impact-section">
         <div className="container">
@@ -124,67 +137,6 @@ export default function Home() {
             <StatBox number="20+" label="Years Experience" icon="📅" />
             <StatBox number="200+" label="Happy Clients" icon="😊" />
             <StatBox number="99.9%" label="Uptime Average" icon="⚙️" />
-          </div>
-        </div>
-        </section>
-
-        {/* Services Detail */}
-        <section className="services-detail-section">
-        <div className="container">
-          <h2>Complete Water Treatment & Energy Services</h2>
-          <p className="section-subtitle">From reverse osmosis systems to solar solutions - comprehensive coverage</p>
-          <div className="services-detail-grid">
-            <div className="service-detail-card">
-              <div className="service-detail-icon">💧</div>
-              <h3>Water Treatment Systems</h3>
-              <p>RO, UF, Pretreatment and Effluent Treatment Plants for industrial and residential applications.</p>
-              <ul>
-                <li>Reverse Osmosis Systems</li>
-                <li>Ultrafiltration Plants</li>
-                <li>Pretreatment Solutions</li>
-              </ul>
-            </div>
-            <div className="service-detail-card">
-              <div className="service-detail-icon">🔧</div>
-              <h3>Engineering & Installation</h3>
-              <p>Complete system design, installation, commissioning with 20+ years of proven expertise.</p>
-              <ul>
-                <li>System Design</li>
-                <li>Professional Installation</li>
-                <li>Commissioning & Testing</li>
-              </ul>
-            </div>
-            <div className="service-detail-card">
-              <div className="service-detail-icon">🧪</div>
-              <h3>Chemicals & Maintenance</h3>
-              <p>Quality chemical supplies, preventive maintenance, optimization and 24/7 technical support.</p>
-              <ul>
-                <li>Treatment Chemicals</li>
-                <li>Preventive Maintenance</li>
-                <li>24/7 Support</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="testimonials-section">
-        <div className="container">
-          <h2>Trusted by Industry Leaders</h2>
-          <p className="section-subtitle">Real results from clients across different sectors</p>
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, idx) => (
-              <Testimonial
-                key={idx}
-                name={testimonial.name}
-                position={testimonial.position}
-                company={testimonial.company}
-                quote={testimonial.quote}
-                metric={testimonial.metric}
-                category={testimonial.category}
-              />
-            ))}
           </div>
         </div>
         </section>

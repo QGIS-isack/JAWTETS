@@ -1,8 +1,23 @@
 import PortfolioItem from '../components/PortfolioItem'
 import './Portfolio.css'
+import boreholeImageOne from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 8.41.12 PM.jpeg'
+import boreholeImageTwo from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 8.41.19 PM.jpeg'
+import boreholeImageThree from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 8.41.20 PM.jpeg'
+import boreholeImageFour from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 8.41.22 PM.jpeg'
+import boreholeImageFive from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 8.41.23 PM.jpeg'
+import boreholeImageSix from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 8.41.24 PM.jpeg'
+import boreholeImageSeven from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 8.41.25 PM.jpeg'
+
+interface Project {
+  id: number
+  title: string
+  category: string
+  description: string
+  images?: string[]
+}
 
 export default function Portfolio() {
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: 'Industrial Water Treatment Plant',
@@ -19,7 +34,16 @@ export default function Portfolio() {
       id: 3,
       title: 'Deep Borehole Project',
       category: 'Borehole Drilling',
-      description: 'Successful drilling and development of a deep water well serving a community of 5000+ residents.'
+      description: 'Successful drilling and development of a deep water well serving a community of residents.',
+      images: [
+        boreholeImageOne,
+        boreholeImageTwo,
+        boreholeImageThree,
+        boreholeImageFour,
+        boreholeImageFive,
+        boreholeImageSix,
+        boreholeImageSeven
+      ]
     },
     {
       id: 4,
@@ -68,6 +92,7 @@ export default function Portfolio() {
               title={project.title}
               category={project.category}
               description={project.description}
+              images={project.images}
             />
           ))}
         </div>

@@ -13,7 +13,13 @@ export default function Navigation() {
       <div className="nav-container">
         <Link to="/" className="nav-logo" onClick={closeMenu}>
           <img className="logo-icon" src={logoIcon} alt="JAWTETS logo" />
-          <span className="logo-subtitle">Water • Energy • Solutions</span>
+          <span className="logo-subtitle">
+            <span className="logo-subtitle-water">Pure Water</span>
+            <span aria-hidden="true"> • </span>
+            <span className="logo-subtitle-energy">Smart Energy</span>
+            <span aria-hidden="true"> • </span>
+            <span className="logo-subtitle-solution">Reliable Solutions</span>
+          </span>
         </Link>
         <button
           className="nav-toggle"

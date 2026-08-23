@@ -44,7 +44,8 @@ export default function Contact() {
             
             <div className="info-item">
               <h3>📍 Address</h3>
-              <p>Jabal, Mwege, Dar es salaam</p>
+              <p>Mwege Lufungila, Dar es salaam</p>
+              <p>Near Mpakani Center Building</p>
             </div>
 
             <div className="info-item">
@@ -55,7 +56,7 @@ export default function Contact() {
 
             <div className="info-item">
               <h3>📧 Email</h3>
-              <p>jawtets@gmail.com</p>
+              <p>info@jawtets.com</p>
             </div>
 
             <div className="info-item">

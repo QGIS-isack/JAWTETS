@@ -64,39 +64,6 @@ export default function WhyChooseUs() {
     }
   ]
 
-  const comparisons = [
-    {
-      category: 'Experience',
-      ours: '20+ Years',
-      industry: 'Variable'
-    },
-    {
-      category: 'Project Success Rate',
-      ours: '99.9%',
-      industry: 'Industry Average'
-    },
-    {
-      category: 'Support Hours',
-      ours: '24/7',
-      industry: 'Business Hours'
-    },
-    {
-      category: 'Response Time',
-      ours: 'Immediate',
-      industry: '24-48 Hours'
-    },
-    {
-      category: 'Technology',
-      ours: 'Latest & Advanced',
-      industry: 'Standard'
-    },
-    {
-      category: 'Customization',
-      ours: 'Fully Tailored',
-      industry: 'Standard Solutions'
-    }
-  ]
-
   return (
     <div className="why-choose-us-page">
       <section className="page-header">
@@ -123,31 +90,6 @@ export default function WhyChooseUs() {
                 <p>{reason.description}</p>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* Comparison */}
-        <section className="comparison-section">
-          <h2>How We Compare</h2>
-          <div className="comparison-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Category</th>
-                  <th className="highlight">JAWTETS</th>
-                  <th>Industry Average</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisons.map((comp, idx) => (
-                  <tr key={idx}>
-                    <td>{comp.category}</td>
-                    <td className="highlight"><strong>{comp.ours}</strong></td>
-                    <td>{comp.industry}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         </section>
 

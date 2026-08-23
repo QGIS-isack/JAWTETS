@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 0 1 340px;
+  flex: 0 1 400px;
   min-width: 0;
   text-decoration: none;
   color: white;
@@ -32,7 +32,7 @@
 .logo-icon {
   display: block;
   width: 100%;
-  height: 50px;
+  height: 72px;
   object-fit: contain;
   object-position: left center;
 }
@@ -41,6 +41,18 @@
   font-size: 0.7rem;
   color: #bdc3c7;
   font-weight: normal;
+}
+
+.logo-subtitle-water {
+  color: #55b9f3;
+}
+
+.logo-subtitle-energy {
+  color: #f6c945;
+}
+
+.logo-subtitle-solution {
+  color: #74d69a;
 }
 
 .nav-menu {
@@ -169,6 +181,10 @@
   .nav-toggle {
     display: block;
     margin-left: auto;
+  }
+
+  .logo-icon {
+    height: 62px;
   }
 
   .nav-menu {

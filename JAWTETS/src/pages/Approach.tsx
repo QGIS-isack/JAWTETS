@@ -129,31 +129,6 @@ export default function Approach() {
           </div>
         </section>
 
-        {/* Why This Approach */}
-        <section className="approach-why">
-          <h2>Why This Approach Works</h2>
-          <p>
-            By combining systematic processes with personalized attention, we ensure your project receives the expertise it deserves. Our methodology has proven results across hundreds of successful projects and satisfied clients.
-          </p>
-          <div className="why-benefits">
-            <div className="benefit">
-              <h4>Risk Mitigation</h4>
-              <p>Thorough planning reduces project risks</p>
-            </div>
-            <div className="benefit">
-              <h4>Cost Efficiency</h4>
-              <p>Optimized processes keep costs controlled</p>
-            </div>
-            <div className="benefit">
-              <h4>Quality Assurance</h4>
-              <p>Multiple checkpoints ensure excellence</p>
-            </div>
-            <div className="benefit">
-              <h4>Long-Term Success</h4>
-              <p>Ongoing support ensures sustained value</p>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   )

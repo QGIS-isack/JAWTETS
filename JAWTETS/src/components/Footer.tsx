@@ -10,7 +10,13 @@ export default function Footer() {
         <div className="footer-section">
           <h3>JAWTETS</h3>
           <p>Jabal Water Treatment, Energy & Technical Services</p>
-          <p className="tagline">Pure Water • Smart Energy • Reliable Solution</p>
+          <p className="tagline">
+            <span className="tagline-water">Pure Water</span>
+            <span aria-hidden="true"> • </span>
+            <span className="tagline-energy">Smart Energy</span>
+            <span aria-hidden="true"> • </span>
+            <span className="tagline-solution">Reliable Solution</span>
+          </p>
         </div>
         
         <div className="footer-section">
@@ -36,7 +42,7 @@ export default function Footer() {
         <div className="footer-section">
           <h4>Contact</h4>
           <p>Website: www.jawtets.com</p>
-          <p>Email: jawtets@gmail.com</p>
+
           <p>Email: info@jawtets.com</p>
           <p>Phone: +255 656 639 615</p>
         </div>
