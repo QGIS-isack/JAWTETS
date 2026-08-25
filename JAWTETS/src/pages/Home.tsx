@@ -10,13 +10,15 @@ import technicalIcon from '../assets/technical-icon.jpg'
 import waterIcon from '../assets/water-icon.jpg'
 import waterImage from '../assets/water.jpg'
 import jawtetsLogo from '../assets/Logo.png'
-import heroImageOne from '../assets/image/WhatsApp Image 2026-08-22 at 8.41.11 PM.jpeg'
-import heroImageTwo from '../assets/image/WhatsApp Image 2026-08-22 at 8.45.08 PM.jpeg'
-import heroImageThree from '../assets/image/WhatsApp Image 2026-08-22 at 8.45.09 PM.jpeg'
-import heroImageFour from '../assets/image/WhatsApp Image 2026-08-22 at 8.45.09 PM (1).jpeg'
-import heroImageFive from '../assets/image/WhatsApp Image 2026-08-22 at 8.45.10 PM.jpeg'
+import heroImageTwoAdded from '../assets/image/2.jpg'
+import heroImageThreeAdded from '../assets/image/3.jpg'
+import heroImageFourAdded from '../assets/image/4.jpg'
 
-const heroImages = [heroImageOne, heroImageTwo, heroImageThree, heroImageFour, heroImageFive]
+const heroImages = [
+  heroImageTwoAdded,
+  heroImageThreeAdded,
+  heroImageFourAdded,
+]
 
 const solutions = [
   { id: 1, iconImage: waterIcon, title: 'Water Treatment Solutions', description: 'Advanced and customized water treatment systems for clean, safe, and sustainable water.' },

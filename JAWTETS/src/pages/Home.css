@@ -9,10 +9,11 @@
   height: min(68vh, 620px);
   display: flex;
   align-items: center;
-  /* background: #b1b0ba; */
+  background: #081928;
   color: white;
   padding: 0;
   isolation: isolate;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -33,7 +34,8 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  animation: hero-image-fade 0.8s ease;
+  animation: hero-image-zoom 5s ease-out both;
+  transform-origin: center;
 }
 
 .hero-overlay {
@@ -93,13 +95,15 @@
   line-height: 1;
 }
 
-@keyframes hero-image-fade {
+@keyframes hero-image-zoom {
   from {
-    opacity: 0.35;
+    opacity: 1;
+    transform: scale(1);
   }
 
   to {
     opacity: 1;
+    transform: scale(1.08);
   }
 }
 
