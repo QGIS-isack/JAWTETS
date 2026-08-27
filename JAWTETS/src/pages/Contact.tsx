@@ -51,7 +51,7 @@ export default function Contact() {
             <div className="info-item">
               <h3>📞 Phone</h3>
               <p>+255 656 639 615</p>
-              <p>+255 714 091 01</p>
+              <p>+255 714 409 101</p>
             </div>
 
             <div className="info-item">
