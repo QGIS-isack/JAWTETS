@@ -22,8 +22,20 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // In a real application, you would send this data to a server
-    console.log('Form submitted:', formData)
+    const whatsappMessage = [
+      'Hello JAWTETS, I would like to make an inquiry.',
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone || 'Not provided'}`,
+      `Service: ${formData.service}`,
+      `Message: ${formData.message}`,
+    ].join('\n')
+
+    window.open(
+      `https://wa.me/255656639615?text=${encodeURIComponent(whatsappMessage)}`,
+      '_blank',
+      'noopener,noreferrer',
+    )
     setSubmitted(true)
     setFormData({ name: '', email: '', phone: '', service: '', message: '' })
     setTimeout(() => setSubmitted(false), 3000)
@@ -164,7 +176,12 @@ export default function Contact() {
         <section className="map-section">
           <h2>Find Us on the Map</h2>
           <div className="map-placeholder">
-            <p>📍 Map location to be added</p>
+            <iframe
+              title="JAWTETS office location"
+              src="https://www.google.com/maps?q=JAWTETS+Dar+es+Salaam+Tanzania&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </section>
       </div>

@@ -61,6 +61,18 @@ export default function PortfolioItem({ title, category, description, images }: 
         <span className="portfolio-category">{category}</span>
         <h3>{title}</h3>
         <p>{description}</p>
+        {hasGallery && (
+          <button
+            className="portfolio-learn-more"
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation()
+              openGallery()
+            }}
+          >
+            Learn more <span aria-hidden="true">-&gt;</span>
+          </button>
+        )}
       </div>
 
       {isGalleryOpen && images && createPortal(

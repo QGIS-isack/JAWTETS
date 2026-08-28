@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 0 1 400px;
+  flex: 0 1 190px;
   min-width: 0;
   text-decoration: none;
   color: white;
@@ -29,12 +29,63 @@
   gap: 0.25rem;
 }
 
-.logo-icon {
+.logo-wordmark {
   display: block;
-  width: 100%;
-  height: 56px;
-  object-fit: contain;
-  object-position: left center;
+  width: auto;
+  font-size: 2.35rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.logo-symbol {
+  position: relative;
+  display: block;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  border: 3px solid #e31b23;
+  border-radius: 50%;
+  background: white;
+  overflow: hidden;
+}
+
+.logo-symbol::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 5px;
+  width: 14px;
+  height: 23px;
+  border: 4px solid #1e5ba8;
+  border-radius: 70% 35% 65% 35%;
+  transform: rotate(45deg);
+}
+
+.logo-symbol::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  bottom: 8px;
+  width: 29px;
+  height: 9px;
+  border-top: 4px solid #1e5ba8;
+  border-radius: 50%;
+  transform: rotate(-8deg);
+}
+
+.logo-wordmark-jaw {
+  color: #1e5ba8;
+}
+
+.logo-wordmark-tets {
+  color: #2e9b48;
 }
 
 .logo-subtitle {
@@ -204,9 +255,31 @@
     padding: 0.65rem 0;
   }
 
-  .logo-icon {
-    width: 180px;
-    height: 56px;
+  .logo-wordmark {
+    width: 160px;
+    font-size: 2rem;
+  }
+
+  .logo-symbol {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+    border-width: 2px;
+  }
+
+  .logo-symbol::before {
+    left: 10px;
+    top: 4px;
+    width: 11px;
+    height: 19px;
+    border-width: 3px;
+  }
+
+  .logo-symbol::after {
+    left: 6px;
+    bottom: 7px;
+    width: 24px;
+    border-top-width: 3px;
   }
 
   .dropdown-menu {

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navigation.css'
-import logoIcon from '../assets/logo-icon.png'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,7 +11,9 @@ export default function Navigation() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo" onClick={closeMenu}>
-          <img className="logo-icon" src={logoIcon} alt="JAWTETS logo" />
+          <span className="logo-wordmark" aria-label="JAWTETS logo">
+            <span className="logo-wordmark-jaw">JAW</span><span className="logo-wordmark-tets">TETS</span>
+          </span>
           <span className="logo-subtitle">
             <span className="logo-subtitle-water">Pure Water</span>
             <span aria-hidden="true"> • </span>
