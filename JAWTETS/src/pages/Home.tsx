@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBuilding, FaBuildingColumns, FaCity, FaClipboard, FaFileCircleCheck, FaFileLines, FaGraduationCap, FaHelmetSafety, FaHouse, FaHospital, FaIndustry, FaPenRuler, FaScrewdriverWrench, FaHeadset, FaTractor, FaHouseChimney, FaUsers } from 'react-icons/fa6'
 import './Home.css'
-import boreholeIcon from '../assets/borehole-icon.jpg'
-import chemicalsIcon from '../assets/chemicals-icon.avif'
-import solarIcon from '../assets/solar-icon.jpg'
-import technicalIcon from '../assets/technical-icon.jpg'
+
+
+
+
 import technicalImage from '../assets/technical.jpg'
-import waterIcon from '../assets/water-icon.jpg'
+
 import waterImage from '../assets/2.jpeg'
 import waterTreatmentIcon from '../assets/water-treatment-icon.svg'
 import solarEnergyIcon from '../assets/solar-energy-icon.svg'
