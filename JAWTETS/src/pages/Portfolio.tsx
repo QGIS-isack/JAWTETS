@@ -96,28 +96,6 @@ export default function Portfolio() {
             />
           ))}
         </div>
-
-        <section className="portfolio-stats">
-          <h2>Our Impact</h2>
-          <div className="stats-grid">
-            <div className="stat">
-              <h3>500+</h3>
-              <p>Projects Completed</p>
-            </div>
-            <div className="stat">
-              <h3>1000+</h3>
-              <p>Satisfied Clients</p>
-            </div>
-            <div className="stat">
-              <h3>50+</h3>
-              <p>Cities Served</p>
-            </div>
-            <div className="stat">
-              <h3>20+</h3>
-              <p>Years Experience</p>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   )

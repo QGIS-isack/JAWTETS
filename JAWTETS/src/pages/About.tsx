@@ -44,28 +44,20 @@ export default function About() {
           <h2>Our Values</h2>
           <div className="values-grid">
             <div className="value-item">
-              <h3>Excellence</h3>
-              <p>Committed to highest standards in all our services</p>
+              <h3>Quality</h3>
+              <p>We deliver high-quality services and solutions that meet professional standards and exceed client expectations.</p>
             </div>
             <div className="value-item">
-              <h3>Integrity</h3>
-              <p>Operating with honesty and transparency in all dealings</p>
+              <h3>Commitment</h3>
+              <p>We are dedicated to our clients, projects, and responsibilities, ensuring reliable and timely service delivery.</p>
             </div>
             <div className="value-item">
-              <h3>Innovation</h3>
-              <p>Continuously improving and adopting new technologies</p>
+              <h3>Trust</h3>
+              <p>We build lasting relationships through honesty, transparency, accountability, and professional integrity.</p>
             </div>
             <div className="value-item">
-              <h3>Sustainability</h3>
-              <p>Committed to environmental responsibility and conservation</p>
-            </div>
-            <div className="value-item">
-              <h3>Customer Focus</h3>
-              <p>Prioritizing customer needs and satisfaction</p>
-            </div>
-            <div className="value-item">
-              <h3>Community</h3>
-              <p>Contributing positively to the communities we serve</p>
+              <h3>Discipline</h3>
+              <p>We maintain professionalism, responsibility, punctuality, and adherence to established standards in everything we do.</p>
             </div>
           </div>
         </section>
@@ -77,24 +69,6 @@ export default function About() {
             in water treatment, renewable energy systems, and technical services. We are dedicated to 
             providing professional solutions tailored to each client's unique needs.
           </p>
-          <div className="team-highlights">
-            <div className="highlight">
-              <h3>20+</h3>
-              <p>Years of Experience</p>
-            </div>
-            <div className="highlight">
-              <h3>500+</h3>
-              <p>Successful Projects</p>
-            </div>
-            <div className="highlight">
-              <h3>100+</h3>
-              <p>Team Members</p>
-            </div>
-            <div className="highlight">
-              <h3>1000+</h3>
-              <p>Satisfied Clients</p>
-            </div>
-          </div>
         </section>
 
         <section className="certifications">

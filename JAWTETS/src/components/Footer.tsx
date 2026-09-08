@@ -23,7 +23,6 @@ export default function Footer() {
           <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/services">Services</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/portfolio">Portfolio</a></li>
           </ul>
@@ -32,10 +31,10 @@ export default function Footer() {
         <div className="footer-section">
           <h4>Services</h4>
           <ul>
-            <li><a href="/services">Water Treatment</a></li>
-            <li><a href="/services">Solar Solutions</a></li>
-            <li><a href="/services">Borehole Drilling</a></li>
-            <li><a href="/services">Chemicals Supply</a></li>
+            <li><a href="/water-treatment">Water Treatment</a></li>
+            <li><a href="/solar-energy">Solar Solutions</a></li>
+            <li><a href="/borehole-drilling">Borehole Drilling</a></li>
+            <li><a href="/chemicals-supply">Chemicals Supply</a></li>
           </ul>
         </div>
         

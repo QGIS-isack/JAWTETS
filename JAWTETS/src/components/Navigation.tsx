@@ -39,7 +39,7 @@ export default function Navigation() {
             <Link to="/" className="nav-link" onClick={closeMenu}>Home</Link>
           </li>
           <li className="nav-item dropdown">
-            <Link to="/services" className="nav-link" onClick={closeMenu}>Services</Link>
+            <span className="nav-link">Services</span>
             <ul className="dropdown-menu">
               <li><Link to="/water-treatment" onClick={closeMenu}>Water Treatment</Link></li>
               <li><Link to="/solar-energy" onClick={closeMenu}>Solar Energy</Link></li>
@@ -52,9 +52,6 @@ export default function Navigation() {
           </li>
           <li className="nav-item">
             <Link to="/approach" className="nav-link" onClick={closeMenu}>Approach</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/why-choose-us" className="nav-link" onClick={closeMenu}>Why Us</Link>
           </li>
           <li className="nav-item">
             <Link to="/portfolio" className="nav-link" onClick={closeMenu}>Portfolio</Link>
