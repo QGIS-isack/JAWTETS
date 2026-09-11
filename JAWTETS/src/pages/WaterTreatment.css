@@ -3,6 +3,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -18,8 +19,10 @@
 }
 .water-intro p {
   color: var(--primary-color);
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+  line-height: 1.5;
+  margin: 0;
+  overflow-wrap: break-word;
 }
 
 /* Treatment Levels */
@@ -231,5 +234,9 @@
   .water-treatment-page .container {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .water-intro {
+    padding: 1.5rem;
   }
 }

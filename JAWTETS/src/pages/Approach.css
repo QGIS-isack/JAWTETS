@@ -6,6 +6,9 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+.page-header {
+  padding: 50px
+}
 
 .approach-intro {
   background-color: var(--light-color);

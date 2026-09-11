@@ -13,7 +13,7 @@ export default function About() {
           <h2>Our Story</h2>
           <p>
             JAWTETS was founded with a mission to provide comprehensive solutions for water treatment, 
-            renewable energy, and technical services. With over 20 years of industry experience, we have 
+            renewable energy, and technical services. With the industry experience, we have 
             established ourselves as a trusted partner for businesses and communities seeking reliable, 
             sustainable solutions.
           </p>
@@ -23,9 +23,7 @@ export default function About() {
           <h2>Our Mission</h2>
           <div className="mission-statement">
             <p>
-              To deliver innovative and sustainable solutions in water treatment, renewable energy, and 
-              technical services, ensuring quality, reliability, and customer satisfaction while contributing 
-              to environmental conservation and community development.
+              To deliver high-quality,innovative and sustainable water and energy solutions that improves lives and protect the environment.
             </p>
           </div>
         </section>
@@ -34,8 +32,7 @@ export default function About() {
           <h2>Our Vision</h2>
           <div className="vision-statement">
             <p>
-              To be the leading provider of integrated water, energy, and technical solutions in the region, 
-              recognized for excellence, innovation, and commitment to sustainable development.
+              To be the leading provider of sustainable water, energy, and technical solutions across Africa and beyond.
             </p>
           </div>
         </section>
