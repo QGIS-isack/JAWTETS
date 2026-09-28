@@ -1,5 +1,6 @@
 import './WaterTreatment.css'
 import treatmentIcon from '../assets/Treat-icon.avif'
+import treatmentVideo from '../assets/Portfolio/client video.mp4'
 
 export default function WaterTreatment() {
   const solutions = [
@@ -130,6 +131,15 @@ export default function WaterTreatment() {
               <strong>Our commitment:</strong> We are dedicated to delivering high quality water treatment solutions that support health, efficiency, and sustainability while building trust with every client we serve.
             </p>
           </div>
+        </section>
+
+        {/* Water Treatment Video */}
+        <section className="water-video" aria-label="Water treatment video">
+          <h2>Testimony from One of Our Customers</h2>
+          <video className="water-video-player" controls playsInline preload="metadata">
+            <source src={treatmentVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </section>
       </div>
     </div>

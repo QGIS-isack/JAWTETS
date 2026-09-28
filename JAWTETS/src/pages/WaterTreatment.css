@@ -225,6 +225,32 @@
   margin-bottom: 1rem;
 }
 
+/* Video */
+.water-video {
+  width: 100vw;
+  margin-top: 3rem;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  border-radius: 0;
+  background: #111;
+}
+
+.water-video h2 {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  color: white;
+  text-align: center;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.water-video-player {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  max-height: none;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   .levels-grid,
   .benefits-grid {
@@ -238,5 +264,13 @@
 
   .water-intro {
     padding: 1.5rem;
+  }
+
+  .water-video {
+    margin-top: 2rem;
+  }
+
+  .water-video-player {
+    height: 100svh;
   }
 }
