@@ -4,6 +4,11 @@ import boreholesImage from '../assets/boreholes.jpg'
 export default function BoreholeDrilling() {
   const services = [
     {
+      icon: '🧭',
+      title: 'GEOPHYSICAL AND HYDROLOGICAL SURVEY',
+      description: 'Site surveys to identify suitable groundwater sources and guide borehole placement'
+    },
+    {
       icon: '⛏️',
       title: 'BOREHOLE DRILLING',
       description: 'Professional drilling to develop reliable water sources for various applications'
@@ -111,7 +116,6 @@ export default function BoreholeDrilling() {
         <section className="borehole-why">
           <h2>Why Choose Our Drilling Services?</h2>
           <ul className="why-list">
-            <li>20+ years of drilling expertise and proven track record</li>
             <li>Modern, well-maintained drilling equipment</li>
             <li>Professional and experienced drilling teams</li>
             <li>Comprehensive site assessment and analysis</li>
