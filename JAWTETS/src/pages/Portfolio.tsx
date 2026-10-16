@@ -7,12 +7,17 @@ import boreholeImageFour from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 
 import boreholeImageFive from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 8.41.23 PM.jpeg'
 import boreholeImageSix from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 8.41.24 PM.jpeg'
 import boreholeImageSeven from '../assets/Portfolio/WhatsApp Image 2026-08-22 at 8.41.25 PM.jpeg'
+import waterImage from '../assets/water.jpg'
+import solarImage from '../assets/solar.jpg'
+import boreholeCoverImage from '../assets/boreholes.jpg'
+import chemicalImage from '../assets/chemical.jpg'
 
 interface Project {
   id: number
   title: string
   category: string
   description: string
+  coverImage: string
   images?: string[]
 }
 
@@ -20,21 +25,24 @@ export default function Portfolio() {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Industrial Water Treatment Plant',
+      title: 'Water Treatment',
       category: 'Water Treatment',
-      description: 'Complete water treatment system installation for a major industrial facility, including filtration, purification, and monitoring systems.'
+      description: 'Industrial treatment plant and advanced purification systems for commercial and hospital facilities, including filtration, monitoring, and high water-quality standards.',
+      coverImage: waterImage
     },
     {
       id: 2,
       title: 'Commercial Solar Array',
       category: 'Solar Solutions',
-      description: 'Large-scale solar panel installation for a commercial complex, providing 40% of annual energy requirements.'
+      description: 'Large-scale solar panel installation for a commercial complex, providing 40% of annual energy requirements.',
+      coverImage: solarImage
     },
     {
       id: 3,
-      title: 'Deep Borehole Project',
+      title: 'Borehole Drilling & Water Systems',
       category: 'Borehole Drilling',
-      description: 'Successful drilling and development of a deep water well serving a community of residents.',
+      description: 'Deep borehole drilling, well development, and pump installation for community water supply and agricultural irrigation projects.',
+      coverImage: boreholeCoverImage,
       images: [
         boreholeImageOne,
         boreholeImageTwo,
@@ -47,33 +55,17 @@ export default function Portfolio() {
     },
     {
       id: 4,
-      title: 'Water Purification System',
-      category: 'Water Treatment',
-      description: 'Advanced purification system for a hospital facility, meeting strict medical water quality standards.'
+      title: 'Residential Solar Installation',
+      category: 'Solar Solutions',
+      description: 'Off-grid solar system installation for residential property with battery storage solutions.',
+      coverImage: solarImage
     },
     {
       id: 5,
-      title: 'Residential Solar Installation',
-      category: 'Solar Solutions',
-      description: 'Off-grid solar system installation for residential property with battery storage solutions.'
-    },
-    {
-      id: 6,
       title: 'Chemical Supply Distribution',
       category: 'Chemical Supply',
-      description: 'Ongoing supply of water treatment chemicals to multiple municipalities and industrial clients.'
-    },
-    {
-      id: 7,
-      title: 'Agricultural Borehole System',
-      category: 'Borehole Drilling',
-      description: 'Multiple borehole drilling and pump installation for agricultural irrigation projects.'
-    },
-    {
-      id: 8,
-      title: 'Eco-Friendly Treatment Solution',
-      category: 'Water Treatment',
-      description: 'Environmentally sustainable water treatment system using advanced filtration technology.'
+      description: 'Ongoing supply of water treatment chemicals to multiple municipalities and industrial clients.',
+      coverImage: chemicalImage
     }
   ]
 
@@ -86,13 +78,15 @@ export default function Portfolio() {
 
       <div className="container">
         <div className="portfolio-grid">
-          {projects.map(project => (
+          {projects.map((project, index) => (
             <PortfolioItem
               key={project.id}
               title={project.title}
               category={project.category}
               description={project.description}
+              coverImage={project.coverImage}
               images={project.images}
+              reversed={index % 2 === 1}
             />
           ))}
         </div>
