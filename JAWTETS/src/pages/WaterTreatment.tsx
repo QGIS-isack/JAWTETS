@@ -1,8 +1,31 @@
+import { useEffect, useState } from 'react'
 import './WaterTreatment.css'
 import treatmentIcon from '../assets/Treat-icon.avif'
 import treatmentVideo from '../assets/Portfolio/client video.mp4'
+import waterSolutionImageOne from '../assets/water_solution/1.jpg'
+import waterSolutionImageTwo from '../assets/water_solution/2.jpg'
+import waterSolutionImageThree from '../assets/water_solution/3.jpg'
+import waterSolutionImageFour from '../assets/water_solution/4.jpg'
+
+const waterSolutionImages = [
+  waterSolutionImageOne,
+  waterSolutionImageTwo,
+  waterSolutionImageThree,
+  waterSolutionImageFour,
+]
+const waterSolutionSlideDuration = 9000
 
 export default function WaterTreatment() {
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
+
+  useEffect(() => {
+    const imageTimer = window.setInterval(() => {
+      setActiveImageIndex((currentIndex) => (currentIndex + 1) % waterSolutionImages.length)
+    }, waterSolutionSlideDuration)
+
+    return () => window.clearInterval(imageTimer)
+  }, [])
+
   const solutions = [
     {
       icon: '🏠',
@@ -49,6 +72,18 @@ export default function WaterTreatment() {
 
   return (
     <div className="water-treatment-page">
+      <section className="water-solution-slideshow" aria-label="Water treatment solutions">
+        {waterSolutionImages.map((image, index) => (
+          <img
+            key={image}
+            className={`water-solution-slide${index === activeImageIndex ? ' is-active' : ''}`}
+            src={image}
+            alt="JAWTETS water treatment solution"
+            aria-hidden={index !== activeImageIndex}
+          />
+        ))}
+      </section>
+
       <section className="page-header">
         <h1>Water Treatment Solutions</h1>
         <p>Complete solutions for domestic, commercial, and industrial water treatment</p>

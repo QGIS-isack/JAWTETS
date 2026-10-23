@@ -673,7 +673,12 @@
 .home-intro, .home-solutions, .process-section, .projects-section, .industries-section { padding: 4.5rem 0; }
 .home-intro { background: #f7f9fb; }
 .intro-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center; gap: 4rem; }
-.intro-grid > img { width: 100%; height: 285px; border-radius: 6px; object-fit: cover; }
+.intro-image-frame { position: relative; width: 100%; height: 285px; overflow: hidden; border-radius: 6px; }
+.intro-image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1); transition: opacity 900ms ease-in-out, transform 5s ease-out; }
+.intro-image.is-active { opacity: 1; transform: scale(1.08); }
+@media (prefers-reduced-motion: reduce) {
+  .intro-image { transition: none; transform: none; }
+}
 .intro-grid h2, .section-heading h2, .industries-section h2 { max-width: 620px; margin: 0 0 1rem; color: #0c3763; font-size: clamp(1.7rem, 3vw, 2.45rem); line-height: 1.15; text-align: left; text-transform: uppercase; }
 .home .intro-grid h2 { text-align: left; }
 .intro-grid p:not(.eyebrow), .home-cta > .container > p:not(.eyebrow) { margin: 0 0 1rem; color: #607083; line-height: 1.65; }

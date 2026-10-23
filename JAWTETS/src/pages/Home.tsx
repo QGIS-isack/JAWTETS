@@ -16,6 +16,8 @@ import heroImageTwoAdded from '../assets/image/2.jpg'
 import heroImageThreeAdded from '../assets/image/3.jpg'
 import heroImageFourAdded from '../assets/image/4.jpg'
 import projectImage from '../assets/image/5.jpg'
+import aboutImageOne from '../assets/about/11.jpg'
+import aboutImageTwo from '../assets/about/2.jpg'
 import torayLogo from '../assets/Toray-icon.png'
 import grundfosLogo from '../assets/grundfos-icon.png'
 import pentairLogo from '../assets/pentair-icon.png'
@@ -28,6 +30,8 @@ const heroImages = [
   heroImageThreeAdded,
   heroImageFourAdded,
 ]
+
+const aboutImages = [aboutImageOne, aboutImageTwo]
 
 const solutions = [
   { title: 'Water Treatment', image: waterImage, icon: waterTreatmentIcon, text: 'RO Systems, Filtration, UV, UF, Softeners & more.' },
@@ -62,13 +66,20 @@ const industries = [
 
 export default function Home() {
   const [heroImageIndex, setHeroImageIndex] = useState(0)
+  const [aboutImageIndex, setAboutImageIndex] = useState(0)
 
   useEffect(() => {
     const imageTimer = window.setInterval(() => {
       setHeroImageIndex((currentIndex) => (currentIndex + 1) % heroImages.length)
     }, 5000)
+    const aboutImageTimer = window.setInterval(() => {
+      setAboutImageIndex((currentIndex) => (currentIndex + 1) % aboutImages.length)
+    }, 5000)
 
-    return () => window.clearInterval(imageTimer)
+    return () => {
+      window.clearInterval(imageTimer)
+      window.clearInterval(aboutImageTimer)
+    }
   }, [])
 
   return (
@@ -85,7 +96,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-intro"><div className="container intro-grid"><img src={heroImageTwoAdded} alt="JAWTETS engineering installation" /><div><p className="eyebrow">Who we are</p><h2>Engineering solutions that create value.</h2><p>JAWTETS is an engineering solutions company specializing in water treatment, solar energy, borehole systems, chemicals and technical consultancy.</p><p>We combine engineering expertise with practical innovation to deliver reliable, efficient and sustainable solutions tailored to each client&apos;s needs.</p><Link to="/about" className="text-link">About JAWTETS <span>-&gt;</span></Link></div></div></section>
+      <section className="home-intro"><div className="container intro-grid"><div className="intro-image-frame">{aboutImages.map((image, index) => <img key={image} className={`intro-image${index === aboutImageIndex ? ' is-active' : ''}`} src={image} alt="JAWTETS engineering installation" aria-hidden={index !== aboutImageIndex} />)}</div><div><p className="eyebrow">Who we are</p><h2>Engineering solutions that create value.</h2><p>JAWTETS is an engineering solutions company specializing in water treatment, solar energy, borehole systems, chemicals and technical consultancy.</p><p>We combine engineering expertise with practical innovation to deliver reliable, efficient and sustainable solutions tailored to each client&apos;s needs.</p><Link to="/about" className="text-link">About JAWTETS <span>-&gt;</span></Link></div></div></section>
 
       <section className="home-solutions"><div className="container"><div className="section-heading"><p className="eyebrow">Our solutions</p><center><h2>Complete solutions. One partner.</h2></center></div><div className="solution-cards">{solutions.map((solution) => <Link to={solution.title === 'Water Treatment' ? '/water-treatment' : solution.title === 'Solar Energy' ? '/solar-energy' : solution.title === 'Borehole Services' ? '/borehole-drilling' : '/chemicals-supply'} className="home-solution-card" key={solution.title}><div className="solution-icon"><img src={solution.icon} alt="" /></div><img className="solution-card-image" src={solution.image} alt="" /><div><h3>{solution.title}</h3><p>{solution.text}</p><span>Explore solutions -&gt;</span></div></Link>)}</div></div></section>
 

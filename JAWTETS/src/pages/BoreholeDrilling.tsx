@@ -1,7 +1,28 @@
+import { useEffect, useState } from 'react'
 import './BoreholeDrilling.css'
 import boreholesImage from '../assets/boreholes.jpg'
+import boreholeSolutionImageTwo from '../assets/borehole_solution/2.jpg'
+import boreholeSolutionImageThree from '../assets/borehole_solution/3.jpg'
+import boreholeSolutionImageFour from '../assets/borehole_solution/4.jpg'
+
+const boreholeSolutionImages = [
+  boreholeSolutionImageTwo,
+  boreholeSolutionImageThree,
+  boreholeSolutionImageFour,
+]
+const boreholeSolutionSlideDuration = 9000
 
 export default function BoreholeDrilling() {
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
+
+  useEffect(() => {
+    const imageTimer = window.setInterval(() => {
+      setActiveImageIndex((currentIndex) => (currentIndex + 1) % boreholeSolutionImages.length)
+    }, boreholeSolutionSlideDuration)
+
+    return () => window.clearInterval(imageTimer)
+  }, [])
+
   const services = [
     {
       icon: '🧭',
@@ -45,6 +66,18 @@ export default function BoreholeDrilling() {
 
   return (
     <div className="borehole-drilling-page">
+      <section className="borehole-solution-slideshow" aria-label="Borehole drilling solutions">
+        {boreholeSolutionImages.map((image, index) => (
+          <img
+            key={image}
+            className={`borehole-solution-slide${index === activeImageIndex ? ' is-active' : ''}`}
+            src={image}
+            alt="JAWTETS borehole drilling solution"
+            aria-hidden={index !== activeImageIndex}
+          />
+        ))}
+      </section>
+
       <section className="page-header">
         <h1>Borehole Drilling Services</h1>
         <p>Professional drilling services for domestic, agricultural, industrial, and commercial applications</p>
